@@ -13,6 +13,11 @@ coverage
 *.metadata.json
 bundles
 
+publish/src
+publish/package
+publish/node_modules
+publish/package-lock.json
+
 src/node_modules/*
 src/package-lock.json
 

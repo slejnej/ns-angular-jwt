@@ -1,7 +1,7 @@
 # Nativescript - Angular - JWT
 
 
-- Angular v6+ and RxJS v6+ -> v1.0
+- Angular v11+ and RxJS v6+ -> v1.0
 
 The library provides an `HttpInterceptor` which automatically attaches a [JSON Web Token](https://jwt.io) to `HttpClient` requests.
 
