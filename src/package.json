@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "JSON Web Token helper library for NS Angular",
   "scripts": {
-    "setup": "npm i && ts-patch install"
+    "setup": "npm i && ts-patch install",
+    "build": "npm run setup && tsc"
   },
   "repository": {
     "type": "git",
@@ -31,7 +32,6 @@
   },
   "homepage": "https://github.com/slejnej/ns-angular-jwt",
   "readmeFilename": "README.md",
-  "main": "bundles/core.umd.js",
   "module": "index.js",
   "typings": "index.d.ts",
   "peerDependencies": {

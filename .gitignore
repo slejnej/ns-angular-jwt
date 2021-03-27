@@ -5,20 +5,16 @@
 nbproject
 manifest.mf
 build.xml
-node_modules/*
 npm-debug.log
 *.js
-!config/*
-!karma.conf.js
-!webpack.config.js
 *.map
 *.d.ts
-!make.js
-!examples/**/*.js
 coverage
 *.metadata.json
 bundles
-package-lock.json
+
+src/node_modules/*
+src/package-lock.json
 
 #################
 ## JetBrains

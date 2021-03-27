@@ -1,12 +1,12 @@
 import { NgModule, ModuleWithProviders, Optional, SkipSelf, Provider } from '@angular/core';
-import { JwtInterceptor } from './src/jwt.interceptor';
-import { JwtHelperService } from './src/jwthelper.service';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { JWT_OPTIONS } from './src/jwtoptions.token';
+import { JwtInterceptor } from './jwt.interceptor';
+import { JwtHelperService } from './jwthelper.service';
+import { HTTP_INTERCEPTORS, HttpClientXsrfModule } from '@angular/common/http';
+import { JWT_OPTIONS } from './jwtoptions.token';
 
-export * from './src/jwt.interceptor';
-export * from './src/jwthelper.service';
-export * from './src/jwtoptions.token';
+export * from './jwt.interceptor';
+export * from './jwthelper.service';
+export * from './jwtoptions.token';
 
 export interface JwtModuleOptions {
   jwtOptionsProvider?: Provider;
@@ -29,7 +29,7 @@ export class JwtModule {
       throw new Error('JWT Module already loaded. Import only in your application\'s main module.');
     }
   }
-  static forRoot(options: JwtModuleOptions): ModuleWithProviders {
+  static forRoot(options: JwtModuleOptions): ModuleWithProviders<HttpClientXsrfModule> {
     return {
       ngModule: JwtModule,
       providers: [
